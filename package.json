@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "deploy": "node ./deploy"
+    "deploy": "vue-cli-service build && node ./deploy"
   },
   "dependencies": {
     "ant-design-vue": "^2.0.0",

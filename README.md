@@ -1,29 +1,14 @@
-# vue-ts-site
+# 自动部署
+```
+// deploy/product.js
 
-## Project setup
-```
-yarn install
-```
+const SERVER = {
+  host: '****', // ip
+  port: 22, // 端口
+  username: 'root', // 登录服务器的账号
+  password: '******', // 登录服务器的账号
+  path: '******', // 发布至静态服务器的项目路径
+};
 
-### Compiles and hot-reloads for development
+module.exports = SERVER;
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

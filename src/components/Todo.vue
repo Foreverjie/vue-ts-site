@@ -1,40 +1,49 @@
 <template>
   <h1>Todo List</h1>
-  <div class="container">
-    <div class="todo new-bucket">
-      <a-button class="todo-item" type="primary" shape="round">New</a-button>
-      <a-button class="todo-item" type="primary" shape="round">asdasd</a-button>
-      <a-button class="todo-item" type="primary" shape="round">Nefffffw</a-button>
-      <a-button class="todo-item" type="primary" shape="round">Nwew</a-button>
-      <a-button class="todo-item" type="primary" shape="round">Nwew</a-button>
-      <a-button class="todo-item" type="primary" shape="round">Nwew</a-button>
-
+    <div class="container">
+      <perfect-scrollbar>
+        <div class="todo new-bucket">
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+          <Capsule type="new">new todo slot</Capsule>
+        </div>
+      </perfect-scrollbar>
+      <a-divider class="divider" type="vertical" />
+      <div class="todo processing-bucket">
+        <Capsule type="processing">processing todo slot</Capsule>
+        <Capsule type="processing">processing todo slot</Capsule>
+        <Capsule type="processing">processing todo slot</Capsule>
+        <Capsule type="processing">processing todo slot</Capsule>
+      </div>
+      <a-divider class="divider" type="vertical" />
+      <div class="todo finished-bucket">
+        <Capsule type="finished">finished todo slot</Capsule>
+        <Capsule type="finished">finished todo slot</Capsule>
+        <Capsule type="finished">finished todo slot</Capsule>
+        <Capsule type="finished">finished todo slot</Capsule>
+      </div>
     </div>
-    <a-divider type="vertical" />
-    <div class="todo processing-bucket">
-      <a-button class="todo-item processing" shape="round">asdasd</a-button>
-      <a-button class="todo-item processing" shape="round">asdasd</a-button>
-      <a-button class="todo-item processing" shape="round">asdasd</a-button>
-      <a-button class="todo-item processing" shape="round">asdasd</a-button>
-      <a-button class="todo-item processing" shape="round">asdasd</a-button>
-
-    </div>
-    <a-divider type="vertical" />
-    <div class="todo finished-bucket">
-      <a-button class="todo-item finished"  shape="round">New</a-button>
-      <a-button class="todo-item finished"  shape="round">New</a-button>
-      <a-button class="todo-item finished"  shape="round">New</a-button>
-      <a-button class="todo-item finished"  shape="round">New</a-button>
-      <a-button class="todo-item finished"  shape="round">New</a-button>
-      <a-button class="todo-item finished"  shape="round">New</a-button>
-    </div>
-  </div>
 </template>
 
 <script lang="ts">
+import Capsule from '@/design/Capsule.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
+  components: { Capsule },
   name: 'Todo',
   props: {
     msg: String,
@@ -54,7 +63,7 @@ h1 {
   justify-content: center;
   display: flex;
 
-  div {
+  .divider {
     display: inline-block;
     height: 100%;
   }
@@ -68,6 +77,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
+    overflow-y: auto;
 
     .todo-item {
       margin: 1em;
@@ -86,7 +96,7 @@ h1 {
     }
   }
 
-  // .new {
+  // .new-bucket {
   //   background-color: rgb(255, 166, 0);
   // }
 

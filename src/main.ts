@@ -5,6 +5,7 @@ import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import './assets/color.less';
 
 const app = createApp({
   render: () => h(App),
